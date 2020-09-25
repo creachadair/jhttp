@@ -55,8 +55,7 @@ type Client struct {
 	// caller.
 	Authorize func(*http.Request) error
 
-	// If set, override the base URL for the API v2 endpoint.
-	// This is mainly useful for testing.
+	// Defines the base URL for requests to the API.
 	BaseURL string
 
 	// If set, this function is called to log interesting events during the
