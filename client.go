@@ -10,9 +10,9 @@
 //    }
 //
 //    ctx := context.Background()
-//    headers, body, err := cli.Call(ctx, &client.Request{
+//    headers, body, err := cli.Call(ctx, &jhttp.Request{
 //       Method: "service/method",
-//       Params: client.Params{
+//       Params: jhttp.Params{
 //          "ids": []string{"a", "b", "c"},
 //       },
 //       Data:        []byte("fly you fools"),
