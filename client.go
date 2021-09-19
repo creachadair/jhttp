@@ -13,7 +13,7 @@
 //    headers, body, err := cli.Call(ctx, &jhttp.Request{
 //       Method: "service/method",
 //       Params: jhttp.Params{
-//          "ids": []string{"a", "b", "c"},
+//          "ids": {"a", "b", "c"},
 //       },
 //       Data:        []byte("fly you fools"),
 //       ContentType: "text/plain",
