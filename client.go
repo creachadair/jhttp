@@ -31,7 +31,6 @@ import (
 	"encoding/json"
 	"errors"
 	"io"
-	"io/ioutil"
 	"net/http"
 	"net/url"
 	"path"
@@ -180,7 +179,7 @@ func (c *Client) stream(ctx context.Context, rsp *http.Response, f Callback) err
 
 	c.log(LogHTTPStatus, rsp.Status)
 	if rsp.StatusCode != http.StatusOK {
-		data, _ := ioutil.ReadAll(body)
+		data, _ := io.ReadAll(body)
 		if c.wantLog(LogResponseBody) {
 			c.log(LogResponseBody, string(data))
 		}

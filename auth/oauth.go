@@ -17,7 +17,7 @@ import (
 	"encoding/hex"
 	"errors"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/url"
 	"strconv"
@@ -131,7 +131,7 @@ func parseBodyParams(req *http.Request) url.Values {
 	if err != nil {
 		return nil
 	}
-	body, err := ioutil.ReadAll(rc)
+	body, err := io.ReadAll(rc)
 	rc.Close()
 	if err != nil {
 		return nil
