@@ -6,7 +6,6 @@
 // user secrets. Methods of the Config type implement signing of requests and
 // handle queries to the API for tokens. At minimum, the APIKey and APISecret
 // fields must be populated with the application's credentials.
-//
 package auth
 
 import (

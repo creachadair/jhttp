@@ -4,25 +4,24 @@
 //
 // Usage outline
 //
-//    cli := &jhttp.Client{
-//       BaseURL:   "https://api.whatevs.com/v2",
-//       Authorize: jhttp.BearerTokenAuthorizer(token),
-//    }
+//	cli := &jhttp.Client{
+//	   BaseURL:   "https://api.whatevs.com/v2",
+//	   Authorize: jhttp.BearerTokenAuthorizer(token),
+//	}
 //
-//    ctx := context.Background()
-//    headers, body, err := cli.Call(ctx, &jhttp.Request{
-//       Method: "service/method",
-//       Params: jhttp.Params{
-//          "ids": {"a", "b", "c"},
-//       },
-//       Data:        []byte("fly you fools"),
-//       ContentType: "text/plain",
-//    })
-//    if err != nil {
-//       log.Fatalf("Request failed: %v", err)
-//    }
-//    process(headers, body)
-//
+//	ctx := context.Background()
+//	headers, body, err := cli.Call(ctx, &jhttp.Request{
+//	   Method: "service/method",
+//	   Params: jhttp.Params{
+//	      "ids": {"a", "b", "c"},
+//	   },
+//	   Data:        []byte("fly you fools"),
+//	   ContentType: "text/plain",
+//	})
+//	if err != nil {
+//	   log.Fatalf("Request failed: %v", err)
+//	}
+//	process(headers, body)
 package jhttp
 
 import (
